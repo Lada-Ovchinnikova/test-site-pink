@@ -1,0 +1,88 @@
+.photo-item {
+  width: 280px;
+  background-color: @bg-lightgrey;
+}
+
+.photo-item__photo-img {
+  display: block;
+}
+
+.photo-item__review {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 122px;
+  padding: 20px;
+}
+
+.photo-item__review-author {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #283645;
+}
+
+.photo-item__timing {
+  font-size: 12px;
+  font-weight: normal;
+  color: #bcc0c4;
+  text-transform: uppercase;
+}
+
+.photo-item__review-text {
+  flex-grow: 1;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-weight: 300;
+}
+
+.photo-item__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.photo-item__heart {
+  fill: #d22856;
+}
+
+.photo-item__likes {
+  margin: 0;
+  margin-left: 17px;
+  padding: 0;
+  font-size: 12px;
+  text-align: right;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-item {
+    width: 300px;
+  }
+
+  .photo-item__review {
+    min-height: 155px;
+    padding: 20px 30px;
+    padding-top: 25px;
+  }
+
+  .photo-item__review-text {
+    min-height: 50px;
+  }
+
+  .photo-item__heart {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .photo-item__likes {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-item__review {
+    padding-left: 28px;
+  }
+}

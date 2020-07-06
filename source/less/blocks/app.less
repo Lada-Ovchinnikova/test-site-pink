@@ -1,0 +1,153 @@
+.app {
+  background-color: #f2f2f2;
+}
+
+.app__title {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding: 0 20px;
+}
+
+.app__list {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.app__description {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.app__option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.app__option {
+  margin-bottom: 35px;
+  padding: 5px 70px;
+  padding-right: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.app__input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -71px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.app__input-radio + label:hover::before {
+  border-color: #000000;
+}
+
+.app__input-radio + label:active::before {
+  border-color: #d22856;
+}
+
+.app__option input[type="radio"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+.app__option input[type="radio"]:disabled + label::before {
+  background-color: #e5e5e5;
+}
+
+.app__input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -59px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d22856;
+}
+
+@media (min-width: @tablet-width) {
+  .app {
+    position: relative;
+    margin-bottom: 65px;
+    padding: 50px 60px;
+    padding-bottom: 55px;
+    border: solid 2px #e5e5e5;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  .app__title {
+    position: absolute;
+    top: -15px;
+    left: 123px;
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 25px;
+    background-color: #ffffff;
+  }
+
+  .app__list {
+    width: auto;
+    padding: 0;
+  }
+
+  .app__option {
+    padding-left: 60px;
+  }
+
+  .app__option:last-child {
+    margin: 0;
+  }
+
+  .app__input-radio + label::before {
+    left: -60px;
+    width: 35px;
+    height: 36px;
+  }
+
+  .app__input-radio:checked + label::after {
+    top: 7px;
+    left: -48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app {
+    box-sizing: border-box;
+    width: 435px;
+    margin-bottom: 65px;
+    padding: 55px 60px;
+  }
+
+  .app__title {
+    top: -15px;
+    left: 32px;
+    padding: 0 25px;
+  }
+
+  .app__option {
+    padding-left: 75px;
+  }
+
+  .app__input-radio + label::before {
+    left: -60px;
+    top: -4px;
+  }
+
+  .app__input-radio:checked + label::after {
+    top: 8px;
+    left: -48px;
+  }
+}

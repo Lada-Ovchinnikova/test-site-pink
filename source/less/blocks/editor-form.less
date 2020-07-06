@@ -1,0 +1,139 @@
+.editor-form__photo {
+  display: block;
+  width: 280px;
+}
+
+.editor-form__link {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.editor-form__buttons {
+  margin: 0 auto;
+}
+
+.editor-form__button {
+  display: block;
+  font: inherit;
+  width: 277px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  padding-bottom: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 60px;
+}
+
+.editor-form__button--publish {
+  color: #d22856;
+  border: solid 3px #d22856;
+  background-color: #ffffff;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.editor-form__button--reset {
+  color: #283645;
+  border: solid 3px #283645;
+  background-color: #f2f2f2;
+  opacity: 0.1;
+
+  &:hover {
+    color: #283645;
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: #283645;
+    color: rgba(205, 206, 210, 1);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .editor-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .editor-form__photo {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .editor-form__link {
+    width: auto;
+    margin: 0;
+    margin-right: 45px;
+  }
+
+  .editor-form__wrapper {
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .instruments__list {
+    margin: 0;
+  }
+
+  .editor-form__buttons {
+    margin: 0;
+    padding: 0;
+  }
+
+  .editor-form__button {
+    width: 260px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor-form {
+    width: auto;
+    padding: 50px 55px;
+    padding-left: 80px;
+    padding-bottom: 60px;
+    background-color: #f2f2f2;
+  }
+
+  .editor-form__link {
+    margin-top: 10px;
+    margin-right: 85px;
+  }
+
+  .editor-form__wrapper {
+    // width: 420px;
+    padding-top: 0;
+  }
+
+  .editor-form__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 412px;
+    margin-top: 120px;
+    margin-left: 5px;
+    padding: 0;
+  }
+
+  .editor-form__button {
+    width: 185px;
+    margin-bottom: 0;
+  }
+}

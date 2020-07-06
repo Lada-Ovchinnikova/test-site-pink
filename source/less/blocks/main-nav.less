@@ -1,0 +1,24 @@
+.main-nav {
+  position: relative;
+  background-color: @bg-darkblue;
+}
+
+.main-nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: solid 1px #000000;
+  top: -1px;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    background-color: transparent;
+  }
+}

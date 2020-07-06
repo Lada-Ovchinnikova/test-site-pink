@@ -1,0 +1,151 @@
+.reviews {
+  margin-bottom: 40px;
+  padding-top: 45px;
+  background-color: @bg-white;
+}
+
+.reviews__list {
+  width: 100%;
+}
+
+.reviews__item {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.reviews__author-name {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.reviews__text {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.reviews__author-info {
+  display: none;
+}
+
+.reviews__toggles {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.reviews__prev,
+.reviews__next {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    margin-bottom: 0;
+    padding-top: 50px;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .reviews__text {
+    margin-bottom: 35px;
+    padding-top: 45px;
+    font-size: 18px;
+  }
+
+  .reviews__author-info {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .reviews__author-name {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .reviews__toggles {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    position: relative;
+    margin-bottom: 25px;
+    padding-top: 0;
+    background-image: url("../img/bg-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: 445px 70px;
+  }
+
+  .reviews__list {
+    display: flex;
+  }
+
+  .reviews__item {
+    width: 750px;
+    min-height: 370px;
+    margin: auto;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+
+  .reviews__author-name {
+    font-size: 24px;
+  }
+
+  .reviews__author-info {
+    font-size: 18px;
+  }
+
+  .reviews__prev,
+  .reviews__next {
+    position: absolute;
+    top: 212px;
+    display: block;
+    width: 22px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews__next {
+    right: 10px;
+    background-image: url("../img/bg-review-arrow-right.svg");
+  }
+
+  .reviews__prev {
+    left: 10px;
+    background-image: url("../img/bg-review-arrow-left.svg");
+  }
+}

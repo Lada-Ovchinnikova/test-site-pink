@@ -1,0 +1,239 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #283645;
+
+  &--closed {
+    background-position: center 0;
+  }
+
+  &--opened {
+    background-position: center 260px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+.page-header--opened .page-header__wrapper-background {
+  background-color: #283645;
+  position: relative;
+}
+
+.page-header--closed .page-header__wrapper-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  padding-bottom: 25px;
+}
+
+// close movement
+@media (max-width: @mobile-tablet-width) {
+  .page-header--closed .main-nav {
+    display: none;
+
+    &--opened {
+      display: block;
+    }
+  }
+
+  .page-header--closed .page-header__toggle-cross {
+    display: none;
+  }
+
+  .page-header--opened .page-header__toggle-burger {
+    display: none;
+  }
+
+  .page-header--nojs .page-header__toggle-cross,
+  .page-header--nojs .page-header__toggle-burger {
+    display: none;
+  }
+}
+
+.page-header__toggle {
+  font-size: 0;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.page-header__toggle > svg {
+  fill: #ffffff;
+}
+
+.page-header__toggle:hover > svg {
+  fill: #d22856;
+}
+
+.page-header__toggle:active > svg {
+  opacity: 0.3;
+}
+
+.page-header__title {
+  min-height: 110px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.page-header__logo svg {
+  display: block;
+  width: 75px;
+  height: 22px;
+}
+
+.page-header__logo:hover svg path {
+  fill: #d22856;
+}
+
+.page-header__logo:active svg path {
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.page-header__logo-text {
+  display: block;
+}
+
+.page-header__logo-tablet,
+.page-header__logo-desktop {
+  display: none;
+}
+
+.page-header__hand-img {
+  display: block;
+  margin-top: 100px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px auto;
+
+    &--opened {
+      background-position: center 260px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .page-header__wrapper {
+    width: 620px;
+    align-items: baseline;
+    padding-top: 25px;
+    padding-bottom: 45px;
+  }
+
+  .page-header__title {
+    min-height: 187px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+  }
+
+  .page-header__logo svg {
+    width: 150px;
+    height: 40px;
+  }
+
+  .page-header__logo-text {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__hand-img {
+    position: absolute;
+    top: 444px;
+    left: 26px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: auto;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .page-header--opened .page-header__wrapper-background,
+  .page-header--closed .page-header__wrapper-background {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .page-header__container {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .page-header__wrapper {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-header__title {
+    min-height: 155px;
+    padding: 65px 10px;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+  }
+
+  .page-header__logo {
+    margin-top: 25px;
+  }
+
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: block;
+  }
+
+  .page-header__logo:active .page-header__logo-pink path {
+    fill: #d22856;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

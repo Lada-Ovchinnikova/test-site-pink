@@ -1,0 +1,136 @@
+.instruments {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.instruments__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.instruments__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  margin: 0;
+  margin-left: 35px;
+  margin-right: 45px;
+  padding: 0;
+  list-style: none;
+}
+
+.instruments__img {
+  fill: #283645;
+  opacity: 0.3;
+}
+
+.instruments__img--active {
+  fill: #d22856;
+  opacity: 1;
+}
+
+.instruments__img:hover {
+  fill: #283645;
+  opacity: 0.5;
+}
+
+.instruments__img--crop {
+  width: 45px;
+  height: 45px;
+}
+
+.instruments__img--fill {
+  width: 50px;
+  height: 50px;
+}
+
+.instruments__img--contrast {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .instruments {
+    width: 275px;
+  }
+
+  .instruments__wrapper {
+    width: auto;
+    padding: 0;
+  }
+
+  .instruments__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 28px;
+    margin: 0;
+  }
+
+  .instruments__item {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+  }
+
+  .instruments__img {
+    fill: #d22856;
+    opacity: 1;
+  }
+
+  .instruments__img--crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .instruments__img--fill {
+    width: 24px;
+    height: 25px;
+  }
+
+  .instruments__img--contrast {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instruments {
+    width: 420px;
+  }
+
+  .instruments__list {
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+  }
+
+  .instruments__item {
+    width: 55px;
+    height: 60px;
+    margin-bottom: 17px;
+    padding-bottom: 0;
+  }
+
+  .instruments__img--crop {
+    width: 49px;
+    height: 53px;
+  }
+
+  .instruments__img--fill {
+    width: 48px;
+    height: 49px;
+  }
+
+  .instruments__img--contrast {
+    width: 32px;
+    height: 32px;
+  }
+}
